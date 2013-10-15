@@ -10,8 +10,9 @@ div.main-content {
 	padding: 15px;
 }
 
-div#description {
-	background: #efefef;
+.fixed {
+	position: fixed;
+	display: block;
 }
 
 
