@@ -2,4 +2,7 @@
   .fixed {
     position: static;
   }
+  p.content {
+  	width: 100%;
+  }
 }
