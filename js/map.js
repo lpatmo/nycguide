@@ -10,7 +10,7 @@ var content = [
 ]
 
 var places = [
-      ['Alley NYC', 40.753694, -73.989082, green, content[0]],
+      ['Alley NYC' + '<p><a href="#alleynyc">Read More</a></p>', 40.753694, -73.989082, green, content[0]],
       ['General Assembly', 40.740575, -73.990112, blue, content[1]],
       ['Trader Joe\'s in Brooklyn', 40.690271, -73.992669, red, content[2]]
     ];
@@ -66,3 +66,29 @@ var places = [
     }
 
     //$('#caption-container').html(descriptions);
+
+
+google.maps.event.addListener(map, 'tilesloaded', function(){
+    document.getElementById('map').style.position = 'static';
+});
+
+
+
+    /**Sticky the map to the top of the window after it appears**/
+/*
+    $(function() {
+      var mapContainer = $('#map-container');
+      var stickyTop = $('#map-container').offset().top;
+      console.log(stickyTop);
+
+      $(window).scroll(function(){
+        var windowTop = $(window).scrollTop();
+        //console.log(windowTop);
+        if (stickyTop < windowTop) {
+          mapContainer.addClass('fixed');
+        } else {
+          mapContainer.removeClass('fixed');
+        }
+      });
+
+    });*/
