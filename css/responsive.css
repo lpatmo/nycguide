@@ -5,4 +5,7 @@
   p.content {
   	width: 100%;
   }
+  span.title {
+  	left: 0;
+  }
 }
