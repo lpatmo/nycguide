@@ -5,13 +5,13 @@ var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
 
 var content = [
   ['<h3>Alley NYC</h3>' + '<p>Co-working space / event venue</p>'],
-  ['<h3>General Assembly</h3>' + '<p>Tech education space</p>'],
+  ['<img src="http://untappedcities.wpengine.com/wp-content/uploads/2012/01/GeneralAssembly.NEF-1.jpg" width="250">'],
   ['<h3>Trader Joe\'s</h3>' + '<p>Organic food at low prices</p>']
 ]
 
 var places = [
-      ['Alley NYC' + '<p><a href="#alleynyc">Read More</a></p>', 40.753694, -73.989082, green, content[0]],
-      ['General Assembly', 40.740575, -73.990112, blue, content[1]],
+      ['<h3>Alley NYC</h3>' + '<button><a href="#alleynyc">Read More</a></button>', 40.753694, -73.989082, green, content[0]],
+      ['<h3>General Assembly</h3>', 40.740575, -73.990112, blue, content[1]],
       ['Trader Joe\'s in Brooklyn', 40.690271, -73.992669, red, content[2]]
     ];
 
