@@ -3,16 +3,29 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+	font-size: 20px !important;
+}
 
-div.main-content {
-	height: 450px;
-	background: #efefef;
-	padding: 15px;
+p {
+	padding: 0px 5px 0px 0px;
+}
+.main-content {
+	//height: 450px;
+	//background: #efefef;
+	padding: 10px 10px;
+	 box-shadow: 0 0 10px #ccc;
+	 margin-top: 20px;
 }
 
 .fixed {
 	position: fixed;
 	display: block;
+}
+
+#description {
+	//padding: 5px 10px 10px 15px;
+	// box-shadow: 0 0 10px #ccc;
 }
 
 
