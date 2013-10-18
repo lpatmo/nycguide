@@ -5,17 +5,33 @@
    ========================================================================== */
 body {
 	font-size: 20px !important;
+	font-family: 'Share Tech', sans-serif;
 }
 
 p {
-	padding: 0px 5px 0px 0px;
+	padding: 0px 5px 15px 0px;
+	margin: 0;
+}
+
+p.content {
+	width: 800px;
+	margin: 0 auto;
+	padding: 30px;
 }
 .main-content {
 	//height: 450px;
 	//background: #efefef;
 	padding: 10px 10px;
-	 box-shadow: 0 0 10px #ccc;
+	 //box-shadow: 0 0 10px #ccc;
 	 margin-top: 20px;
+	 border-radius: 3px;
+}
+
+.background-white {
+	background: white;
+}
+.white {
+	color: white;
 }
 
 .fixed {
@@ -26,11 +42,54 @@ p {
 #description {
 	//padding: 5px 10px 10px 15px;
 	// box-shadow: 0 0 10px #ccc;
+	color: white;
 }
 
+.background {
+	background: url('../images/black_lozenge.png');
+	background-size: cover;
+	z-index: -100;
+}
 
+/**Header Section**/
+.top {
+	height: 500px;
+	background: url('../images/empirestate.jpg');
+	background-size: cover;
 
+}
+.intro {
+	background: url('../images/greyzz.png');
+	//color: white;
+}
 
+span.title {
+	color: black;
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+	top: 32%;
+	left: 10%;
+	text-shadow: 3px 3px 5px #ccc;
+	font-size: 70px;
+	font-family: 'Share Tech', sans-serif;
+}
+
+span.title, h1, h2, h3 {
+	font-family: 'Share Tech', sans-serif;
+}
+
+/**Functionals**/
+.align-center {
+	text-align: center;
+}
+
+/**Map area**/
+.map-caption {
+	margin-top: 0; 
+	background: #3b5998;
+	color: white;
+}
 
 
 

@@ -6,7 +6,7 @@ var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
 var content = [
   ['<h3>Alley NYC</h3>' + '<p>Co-working space / event venue</p>'],
   ['<h3>General Assembly</h3>' + '<p>Tech education space</p>'],
-  ['<h3>Trader Joe\'s</h3>' + '<p>Organic food at low costs</p>']
+  ['<h3>Trader Joe\'s</h3>' + '<p>Organic food at low prices</p>']
 ]
 
 var places = [
