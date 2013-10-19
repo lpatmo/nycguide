@@ -53,7 +53,7 @@ p.content {
 }
 
 .background {
-	background: url('../images/black_lozenge.png');
+	background: url('../images/greyzz.png');
 	background-size: cover;
 	z-index: -100;
 }
@@ -66,8 +66,8 @@ p.content {
 
 }
 .intro {
-	background: url('../images/greyzz.png');
-	//color: white;
+	background: url('../images/black_lozenge.png');
+	color: white;
 }
 
 span.title {

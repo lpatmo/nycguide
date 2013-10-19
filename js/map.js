@@ -5,7 +5,7 @@ var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
 
 var content = [
   ['<img src="http://ww1.prweb.com/prfiles/2013/01/15/10326595/Alley.jpg" alt="alleynyc" width="250">'],
-  ['<img src="http://untappedcities.wpengine.com/wp-content/uploads/2012/01/GeneralAssembly.NEF-1.jpg" alt="generalassembly" width="250">'],
+  ['<img src="http://nycguide.herokuapp.com/images/ga1.jpg" alt="generalassembly" width="250">'],
   ['<img src="http://3.bp.blogspot.com/-SPEsSSf5ARU/T4eLzyAh0LI/AAAAAAAAAJ8/JmtNN6or9lY/s1600/2008_9_brooklyntraderjoesshelves.jpg" alt="traderjoebrooklyn" width="250">']
 ]
 
