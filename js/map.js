@@ -4,15 +4,15 @@ var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
   var red = colorPrefix + 'red-dot.png';
 
 var content = [
-  ['<h3>Alley NYC</h3>' + '<p>Co-working space / event venue</p>'],
-  ['<img src="http://untappedcities.wpengine.com/wp-content/uploads/2012/01/GeneralAssembly.NEF-1.jpg" width="250">'],
-  ['<h3>Trader Joe\'s</h3>' + '<p>Organic food at low prices</p>']
+  ['<img src="http://ww1.prweb.com/prfiles/2013/01/15/10326595/Alley.jpg" alt="alleynyc" width="250">'],
+  ['<img src="http://untappedcities.wpengine.com/wp-content/uploads/2012/01/GeneralAssembly.NEF-1.jpg" alt="generalassembly" width="250">'],
+  ['<img src="http://3.bp.blogspot.com/-SPEsSSf5ARU/T4eLzyAh0LI/AAAAAAAAAJ8/JmtNN6or9lY/s1600/2008_9_brooklyntraderjoesshelves.jpg" alt="traderjoebrooklyn" width="250">']
 ]
 
 var places = [
-      ['<h3>Alley NYC</h3>' + '<button><a href="#alleynyc">Read More</a></button>', 40.753694, -73.989082, green, content[0]],
-      ['<h3>General Assembly</h3>', 40.740575, -73.990112, blue, content[1]],
-      ['Trader Joe\'s in Brooklyn', 40.690271, -73.992669, red, content[2]]
+      ['<h3>Alley NYC</h3>' + '<a class="btn btn-default" href="#alleynyc">Read More</a>', 40.753694, -73.989082, green, content[0]],
+      ['<h3>General Assembly</h3>' + '<a class="btn btn-default" href="#generalassembly">Read More</a>', 40.740575, -73.990112, blue, content[1]],
+      ['<h3>Trader Joe\'s in Brooklyn</h3>' + '<a class="btn btn-default" href="#traderjoebrooklyn">Read More</a>', 40.690271, -73.992669, red, content[2]]
     ];
 
 

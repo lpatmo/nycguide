@@ -37,12 +37,13 @@ p.content {
 .fixed {
 	position: fixed;
 	display: block;
+	width: 300px;
 }
 
 #description {
 	padding: 5px 10px 10px 15px;
-	box-shadow: 0 0 10px #ccc;
-	background: white;
+	//box-shadow: 0 0 10px #ccc;
+	background: none;
 	color: black;
 	display: inline-block;
 	position: absolute;
