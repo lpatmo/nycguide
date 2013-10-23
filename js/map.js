@@ -1,3 +1,19 @@
+ $(document).ready(function(){
+
+   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&topic=technology&order=members&key=4c12622256c1e9458457d6542c23&callback=?");
+
+var messagePromise = promise.then(function (data) {
+    var htmlString = "";
+    $.each(data.results, function (i, item) {
+        htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
+    console.log(item.lat, item.lon);
+    }); //each 
+    $('#groups').html(htmlString);
+
+  }); //first promise
+   
+
+
 var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
   var green = colorPrefix + 'green-dot.png';
   var blue = colorPrefix + 'blue-dot.png';
@@ -40,6 +56,7 @@ var places = [
          };
 
     for (i = 0; i < places.length; i++) { 
+      
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(places[i][1], places[i][2]),
         map: map,
@@ -92,3 +109,6 @@ google.maps.event.addListener(map, 'tilesloaded', function(){
       });
 
     });*/
+
+
+  }); //end document ready
