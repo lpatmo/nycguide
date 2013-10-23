@@ -41,14 +41,18 @@ p.content {
 }
 
 #description {
-	padding: 5px 10px 10px 15px;
-	//box-shadow: 0 0 10px #ccc;
-	background: none;
+	//padding: 5px 10px 10px 15px;
+	padding: 10px;
+	box-shadow: 0 0 10px #ccc;
+	background: white;
+	font-size:14px;
+	//background: url('../images/black_lozenge.png');
 	color: black;
-	display: inline-block;
-	position: absolute;
-	right: 15px;
-	bottom: 0px;
+	line-height:15px;
+	//display: inline-block;
+	//position: absolute;
+	//right: 15px;
+	//bottom: 0px;
 	//border: 1px solid red;
 }
 

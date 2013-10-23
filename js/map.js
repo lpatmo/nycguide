@@ -6,9 +6,30 @@ var messagePromise = promise.then(function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
         htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
-    console.log(item.lat, item.lon);
+    //console.log(item.lat, item.lon);
+
+    for (i = 0; i < 10; i++) {  //creating new markers
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(item.lat, item.lon),
+        map: map,
+        icon: blue
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        var meetupgroup = '<h2><a href="' + item.link + '" target="_blank">' + item.name + '</a></h2>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
+        var meetuplogo = '<a href="' + item.link + '" target="_blank">' + '<img src="' + item.photo_url + '">' + '</a>';
+        return function() {
+          infowindow.setContent(meetuplogo);
+          infowindow.open(map, marker);
+          //$('.caption' + i).css('visibility','visible').fadeIn('slow').removeClass('hidden');
+         $('#description').hide().html(meetupgroup).fadeIn();
+        }
+      })(marker, i));
+      console.log(descriptions);
+    }
+
     }); //each 
-    $('#groups').html(htmlString);
+   // $('#groups').html(htmlString);
 
   }); //first promise
    
@@ -55,18 +76,13 @@ var places = [
            }
          };
 
-    for (i = 0; i < places.length; i++) { 
+    /*for (i = 0; i < places.length; i++) { 
       
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(places[i][1], places[i][2]),
         map: map,
         icon: places[i][3]
       });
-
-    
-
-     // $('#caption-container').append('<div class="hidden caption' + i + '">' + places[i][3] + '</div>');
-     //if I don't want any of the caption-containers to disappear 
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
@@ -76,11 +92,8 @@ var places = [
          $('#description').hide().html(places[i][4]).fadeIn();
         }
       })(marker, i));
-
-       //descriptions += '<div class="hidden caption' + i + '">' + places[i][3] + '</div>';
-      //var descriptions = places[i][3];
       console.log(descriptions);
-    }
+    }*/
 
     //$('#caption-container').html(descriptions);
 
