@@ -1,6 +1,6 @@
  $(document).ready(function(){
-
-   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&topic=technology&order=members&key=4c12622256c1e9458457d6542c23&callback=?");
+  //var apikey = '4c12622256c1e9458457d6542c23';
+   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&topic=technology&order=members&key=" + apikey + "&callback=?");
 
 var messagePromise = promise.then(function (data) {
     var htmlString = "";

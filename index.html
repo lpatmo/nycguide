@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>A Hacker's Guide to NYC</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+<meta name="viewport" content="initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -36,7 +36,7 @@
    
         <div class="col-lg-8">
           <div id="map-container">
-            <a name="backtomap"></a>
+            <a id="backtomap"></a>
               <div id="map" style="width: 100%; height: 550px;"></div>
            </div><!--mapcontainer-->
        <!-- </div>
@@ -58,11 +58,14 @@
                   </p>
 </div>
 </div>
+
+            <div id="groups"></div>
 <div class="row">
 
         <div class="col-lg-4 main-content">
           <div class="table-of-contents">
-              <ul><h3>Table of Contents</h3>
+            <h3>Table of Contents</h3>
+              <ul>
                 <li>Where do I meet other awesome developers for free?</li>
                   <ul>
                       <li>Hackathons</li>
@@ -87,39 +90,40 @@
 
             </div>
         </div>
+
+           
+   
          <div class="col-lg-8 main-content">
 
           
-              <hr />
-            <div id="groups"></div>
 
               <p>Yes, New York is known for media/advertising, finance, and real estate. But it's also fast becoming a tech town -- NYC's <a href="http://www.theverge.com/2013/9/30/4784088/bloomberg-tech-summit-study-says-new-york-city-tech-is-booming" target="_blank"> second largest sector</a>, according to <a href="http://www.mikebloomberg.com/files/buildingadigitalcity.pdf" target="_blank">a study</a> prepared for the Bloomberg Technology Summit.  </p>
               <hr />
               <h2>Where do I meet other awesome developers for free?</h2>
-              <a name="hackathons">Hackathons</a>
+              <a id="hackathons">Hackathons</a>
               <p>Seems like there's a hackathon every other weekend... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a name="hackerhours">Hacker Hours and Code Crew</a>
+              <a id="hackerhours">Hacker Hours and Code Crew</a>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               <a name="specific">Language or topic-specific</a>
+               <a id="specific">Language or topic-specific</a>
                  <p>- Talk about Wordpress, Ruby on Rails, Python, DoSomething's Social Good meetup here...</p>
-                 <a name="women">Women-oriented</a>
+                 <a id="women">Women-oriented</a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a name="alleynyc">Alley NYC</a>
+              <a id="alleynyc">Alley NYC</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -127,14 +131,14 @@
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               <h2>Tech Education (paid)</h2>
-                   <a name="generalassembly">General Assembly</a>
+                   <a id="generalassembly">General Assembly</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               <a name="nyucolumbia">NYU and Columbia</a>
+               <a id="nyucolumbia">NYU and Columbia</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -142,14 +146,14 @@
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-              <a name="flatironschool">The Flatiron School</a>
+              <a id="flatironschool">The Flatiron School</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a name="thirdward">3rd Ward</a>
+                <a id="thirdward">3rd Ward</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -158,7 +162,7 @@
               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <h2>Other Activities (quick guide)</h2>
                   <h2>Eating (quick guide)</h2>
-                <a name="traderjoebrooklyn">Trader Joe's in Brooklyn</a>
+                <a id="traderjoebrooklyn">Trader Joe's in Brooklyn</a>
                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -195,6 +199,7 @@
         <script src="js/qunit.js"></script>
         <script src="js/test.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/key.js"></script>
         <script src="js/map.js?version=2"></script>
 
 
