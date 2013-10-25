@@ -1,7 +1,7 @@
  $(function() {
       var tableOfContents = $('.table-of-contents');
       var stickyTop = $('.table-of-contents').offset().top;
-      console.log(stickyTop);
+     // console.log(stickyTop);
 
       $(window).scroll(function(){
         var windowTop = $(window).scrollTop();

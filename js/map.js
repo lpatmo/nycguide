@@ -1,18 +1,29 @@
  $(document).ready(function(){
-  //var apikey = '4c12622256c1e9458457d6542c23';
-   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&topic=technology&order=members&key=" + apikey + "&callback=?");
+  //creates the map, centers it in manhattan
+    var map = new google.maps.Map(document.getElementById('map'), { 
+      zoom: 13,
+      center: new google.maps.LatLng(40.753694,-73.989082),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
+  //creates the infowindow
+    var infowindow = new google.maps.InfoWindow();
+
+
+   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&radius=8&topic=technology&order=members&key=" + apikey + "&callback=?");
+//alert(Object.keys(promise).length);
+//console.log(Object.keys(promise).length);
 var messagePromise = promise.then(function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
         htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
-    //console.log(item.lat, item.lon);
-
-    for (i = 0; i < 10; i++) {  //creating new markers
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(item.lat, item.lon),
+        //var marker, i, markerColor;
+        var latLng = new google.maps.LatLng(item.lat, item.lon);
+  // for (i = 0; i < 10; i++) {  //creating new markers
+      var marker = new google.maps.Marker({
+        position: latLng,
         map: map,
-        icon: blue
+        icon: item.photo_url
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -25,11 +36,11 @@ var messagePromise = promise.then(function (data) {
          $('#description').hide().html(meetupgroup).fadeIn();
         }
       })(marker, i));
-      console.log(descriptions);
-    }
+      //console.log(descriptions);
+  // } //end for loop
 
     }); //each 
-   // $('#groups').html(htmlString);
+   //$('#groups').html(htmlString);
 
   }); //first promise
    
@@ -53,20 +64,13 @@ var places = [
     ];
 
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 13,
-      center: new google.maps.LatLng(40.753694,-73.989082),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
+  
 
-    var infowindow = new google.maps.InfoWindow();
-
-    var marker, i, markerColor;
 
     var descriptions = '';
 
        for (i = 0; i < places.length; i++) { 
-        console.log(places[i][3]);
+        //console.log(places[i][3]);
       if (places[i][3] === "green") {
         markerColor = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
            } else if (places[i][3] === "blue" ) {
@@ -97,11 +101,11 @@ var places = [
 
     //$('#caption-container').html(descriptions);
 
-
+/*
 google.maps.event.addListener(map, 'tilesloaded', function(){
     document.getElementById('map').style.position = 'static';
 });
-
+*/
 
 
     /**Sticky the map to the top of the window after it appears**/
