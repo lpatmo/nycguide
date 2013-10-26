@@ -6,31 +6,23 @@
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-
   //creates the infowindow
     var infowindow = new google.maps.InfoWindow();
 
-
    var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&radius=8&topic=technology&order=members&key=" + apikey + "&callback=?");
-//alert(Object.keys(promise).length);
-//console.log(Object.keys(promise).length);
-var messagePromise = promise.then(function (data) {
+    var messagePromise = promise.then(function (data) {
     var htmlString = "";
+    
     $.each(data.results, function (i, item) {
         htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
         //var marker, i, markerColor;
         var latLng = new google.maps.LatLng(item.lat, item.lon);
 
-  // for (i = 0; i < 10; i++) {  //creating new markers
-
-
-
-
       var marker = new google.maps.Marker({
         position: latLng,
         map: map,
         icon: green
-      });
+    }); //each
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         var meetupgroup = '<h2><a href="' + item.link + '" target="_blank">' + item.name + '</a></h2>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>' + '<p><a class="btn btn-primary btn-lg" href="' + item.link + '">' + 'Check out the meetup group' + '</a>';
@@ -42,15 +34,13 @@ var messagePromise = promise.then(function (data) {
          $('#description').hide().html(meetupgroup).fadeIn();
         }
       })(marker, i));
-      //console.log(descriptions);
-  // } //end for loop
 
     }); //each 
    //$('#groups').html(htmlString);
 
   }); //first promise
    
-
+/*Code below is mostly unused now but can be used to change color of markers*/
 
 var colorPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
   var green = colorPrefix + 'green-dot.png';
@@ -84,53 +74,5 @@ var places = [
         markerColor = 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/256/Map-Marker-Ball-Azure-icon.png';
            }
          };
-
-    /*for (i = 0; i < places.length; i++) { 
-      
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(places[i][1], places[i][2]),
-        map: map,
-        icon: places[i][3]
-      });
-
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(places[i][0]);
-          infowindow.open(map, marker);
-          //$('.caption' + i).css('visibility','visible').fadeIn('slow').removeClass('hidden');
-         $('#description').hide().html(places[i][4]).fadeIn();
-        }
-      })(marker, i));
-      console.log(descriptions);
-    }*/
-
-    //$('#caption-container').html(descriptions);
-
-/*
-google.maps.event.addListener(map, 'tilesloaded', function(){
-    document.getElementById('map').style.position = 'static';
-});
-*/
-
-
-    /**Sticky the map to the top of the window after it appears**/
-/*
-    $(function() {
-      var mapContainer = $('#map-container');
-      var stickyTop = $('#map-container').offset().top;
-      console.log(stickyTop);
-
-      $(window).scroll(function(){
-        var windowTop = $(window).scrollTop();
-        //console.log(windowTop);
-        if (stickyTop < windowTop) {
-          mapContainer.addClass('fixed');
-        } else {
-          mapContainer.removeClass('fixed');
-        }
-      });
-
-    });*/
-
 
   }); //end document ready
