@@ -9,14 +9,19 @@
   //creates the infowindow
     var infowindow = new google.maps.InfoWindow();
 
-   var promise = $.getJSON("http://api.meetup.com/groups.json/?zip=10001&radius=8&topic=technology&order=members&key=" + apikey + "&callback=?");
+   var promise = $.getJSON("http://api.meetup.com/2/open_events.json?zip=10001&radius=7&topic=technology&status=upcoming&time=,1w&key=" + apikey + "&callback=?");
     var messagePromise = promise.then(function (data) {
-    var htmlString = "";
+      var htmlString = "";
+     
     
-    $.each(data.results, function (i, item) {
-        htmlString += '<h3><a href="' + item.link + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
-        //var marker, i, markerColor;
-        var latLng = new google.maps.LatLng(item.lat, item.lon);
+       $.each(data.results, function (i, item) {
+
+            if (item.venue) {
+              htmlString += '<h3><a href="' + item.event_url + '" target="_blank">' + item.name + '</a></h3>' + '<p><img src="' + item.photo_url + '" width="200"></p>' + '<p>' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>';
+              //var marker, i, markerColor;
+              var latLng = new google.maps.LatLng(item.venue.lat, item.venue.lon);
+             
+         
 
       var marker = new google.maps.Marker({
         position: latLng,
@@ -25,8 +30,10 @@
     }); //each
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        var meetupgroup = '<h2><a href="' + item.link + '" target="_blank">' + item.name + '</a></h2>' + '<p> <strong>Last active:</strong> ' + item.updated + ' (' + item.members + ' members) '  + '</p>' + '<p>' + item.description + '</p>' + '<p><a class="btn btn-primary btn-lg" href="' + item.link + '">' + 'Check out the meetup group' + '</a>';
-        var meetuplogo = '<a href="' + item.link + '" target="_blank">' + '<img src="' + item.photo_url + '">' + '</a>';
+          var time = item.time;
+              var date = new Date(time);
+        var meetupgroup = '<h2>' + item.name + ' <a href="' + item.event_url + '" target="_blank">' + '(' + item.group.name + ') '+ '</a></h2>' + '<h3>' + date + '</h3>' + ' (' + item.yes_rsvp_count + ' people attending) ' + '<p>' + item.description + '</p>' + '<p><a class="btn btn-primary btn-lg" href="' + item.event_url + '">' + 'RSVP on the Meetup page' + '</a>';
+        var meetuplogo = '<a href="' + item.event_url + '" target="_blank">' + item.name + '</a>';
         return function() {
           infowindow.setContent(meetuplogo);
           infowindow.open(map, marker);
@@ -35,8 +42,10 @@
         }
       })(marker, i));
 
+         }// item.venue
+
     }); //each 
-   //$('#groups').html(htmlString);
+   $('#groups').html(htmlString);
 
   }); //first promise
    

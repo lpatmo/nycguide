@@ -1,6 +1,6 @@
  $(function() {
       var tableOfContents = $('.table-of-contents');
-      var stickyTop = $('.table-of-contents').offset().top;
+      var stickyTop = $('a#hackathons').offset().top;
      // console.log(stickyTop);
 
       $(window).scroll(function(){
