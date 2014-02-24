@@ -1,5 +1,7 @@
 #A Hacker's Guide to NYC
 
+DEMO: http://nycguide.herokuapp.com/
+
 Here's the inspiration for this project: http://islandofatlas.net/2013/10/04/a-hackers-guide-to-the-bay-area.html#hist-geo
 
 Instead of writing about the bay area, I'm going to write about the NYC tech scene. The difference: am going to incorporate the Google Maps API and (possibly) the Meetup API too.
