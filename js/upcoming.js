@@ -4,7 +4,7 @@ function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
          if (item.venue) {
-        htmlString += '<h3><a href="' + item.event_url + '" target="_blank">' + item.name + '</a></h3>';
+        htmlString += '<span class="upcoming-block"><a href="' + item.event_url + '" target="_blank">' + item.name + '</a></span>';
       //  var address_1 = item.venue['address_1'];
       // var venuetesting = item.venue;
       // console.log(venuetesting["id"]);
