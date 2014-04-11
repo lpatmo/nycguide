@@ -30,8 +30,8 @@
     }); //each
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
-          var time = item.time;
-              var date = new Date(time);
+           var time = item.time;
+            var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
         var meetupgroup = '<h2>' + item.name + ' <a href="' + item.event_url + '" target="_blank">' + '(' + item.group.name + ') '+ '</a></h2>' + '<h3>' + date + '</h3>' + '<p> (' + item.yes_rsvp_count + ' people attending so far) </p>' + '<p><a class="btn btn-primary btn-lg" href="' + item.event_url + '">' + 'RSVP to this event on Meetup.com' + '</a>';
         var meetuplogo = '<a href="' + item.event_url + '" target="_blank">' + item.name + '</a>';
         return function() {

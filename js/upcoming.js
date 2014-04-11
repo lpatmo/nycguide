@@ -4,7 +4,9 @@ function (data) {
     var htmlString = "";
     $.each(data.results, function (i, item) {
          if (item.venue) {
-        htmlString += '<span class="upcoming-block"><a href="' + item.event_url + '" target="_blank">' + item.name + '</a></span>';
+            var time = item.time;
+            var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
+        htmlString += '<span class="upcoming-block"><a href="' + item.event_url + '" target="_blank">' + item.name + '<span class="event-time">' + date + '</span></a>' + '</span>';
       //  var address_1 = item.venue['address_1'];
       // var venuetesting = item.venue;
       // console.log(venuetesting["id"]);
