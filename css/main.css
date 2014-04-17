@@ -165,7 +165,17 @@ span.title, h1, h2, h3 {
 }
 
 
+@media all and (max-width: 767px) {
+	.table-of-contents {
+		display: none;
+	}
+}
 
+@media all (max-width: 1200px) and (min-width: 768px){
+	.table-of-contents {
+		width: 100% !important;
+	}
+}
 
 
 
