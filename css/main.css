@@ -6,6 +6,7 @@
 body {
 	font-size: 20px !important;
 	font-family: 'Share Tech', sans-serif;
+	font-family: 'EB Garamond', 'serif';
 }
 
 p {
@@ -16,7 +17,10 @@ p {
 p.content {
 	width: 800px;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 20px 30px;
+	background: url('../images/black_lozenge.png');
+	position: relative;
+	top: -40px;
 }
 a:link, a:active, a:visited {
 	color: #086FA1;
@@ -120,6 +124,7 @@ a.btn {
 .intro {
 	background: url('../images/black_lozenge.png');
 	color: white;
+	height: 120px;
 }
 
 span.title {
@@ -131,11 +136,13 @@ span.title {
 	left: 10%;
 	text-shadow: 2px 1px 3px #ccc;
 	font-size: 70px;
-	font-family: 'Share Tech', sans-serif;
+	//font-family: 'Share Tech', sans-serif;
+
 }
 
 span.title, h1, h2, h3 {
-	font-family: 'Share Tech', sans-serif;
+	//font-family: 'Share Tech', sans-serif;
+	font-family: 'EB Garamond', 'serif';
 }
 
 /**Functionals**/
