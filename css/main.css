@@ -17,7 +17,7 @@ p {
 p.content {
 	width: 800px;
 	margin: 0 auto;
-	padding: 20px 30px;
+	padding: 20px 30px 0px 30px;
 	background: url('../images/black_lozenge.png');
 	position: relative;
 	top: -40px;
@@ -28,24 +28,27 @@ a:link, a:active, a:visited {
 a:hover {
 	color: #086FA1;
 	text-decoration: none;
+}
+a.btn, a.btn:hover {
+	color: white;
+	//background: #086FA1;
 	position: relative;
 	top: 1px;
 	left: 1px;
 	box-shadow: none;
-}
-a.btn, a.btn:hover {
-	color: white;
-	background: #086FA1;
 }
 a.btn {
 	-moz-box-shadow: 1px 1px 2px #ccc;
 	-webkit-box-shadow: 1px 1px 2px #ccc;
 	box-shadow: 1px 1px 2px #ccc;
 }
-.upcoming-block a {
+.upcoming-block {
 	color: #086FA1;
 }
-.upcoming-block a:hover {
+.upcoming-block:hover a {
+	color: white;
+}
+.upcoming-block:hover {
 	background: #086FA1;
 	color: white;
 	webkit-transition: left 300ms;
@@ -53,14 +56,29 @@ a.btn {
 	-ms-transition: left 300ms;
 	-o-transition: left 300ms;
 	transition: left 300ms;
+	cursor: pointer;
 }
-.upcoming-block a:hover .event-time {
-	color: #ccc;
+.upcoming-block {
+	display: inline-block;
+	margin: 4px 4px 4px 0;
+	background: white;
+	padding: 10px;
+	box-shadow: 0 0 10px #ccc;
+}
+.upcoming-block:hover .event-time {
+	//color: #ccc;
+}
+.upcoming-block:hover a.btn-meetup, a.btn-meetup:hover {
+	background: #cc1c32;
+	color: white;
+}
+.custom-hide {
+	display: none;
 }
 .main-content {
 	//height: 450px;
 	//background: #efefef;
-	padding: 10px 10px;
+	padding: 20px;
 	 //box-shadow: 0 0 10px #ccc;
 	 margin-top: 20px;
 	 border-radius: 3px;
@@ -97,13 +115,7 @@ a.btn {
 	z-index: -100;
 }
 
-.upcoming-block a {
-	display: inline-block;
-	margin: 4px 4px 4px 0;
-	background: white;
-	padding: 10px;
-	box-shadow: 0 0 10px #ccc;
-}
+
 .table-of-contents, .table-of-contents.fixed {
 	padding: 5px 10px 10px 15px;
 	color: white;
@@ -124,7 +136,6 @@ a.btn {
 .intro {
 	background: url('../images/black_lozenge.png');
 	color: white;
-	height: 120px;
 }
 
 span.title {
