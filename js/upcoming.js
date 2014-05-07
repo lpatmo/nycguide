@@ -7,7 +7,7 @@ promise.done(function (data) {
          if (item.venue && item.description) {
             var time = item.time;
             var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
-        htmlString += '<div class="upcoming-block"><div class="expand" target="_blank">' + item.name + '<span class="event-time">' + date + '</span>' + '</div><div class="hidden-until-shown custom-hide">' + item.description + '</div>' + '</div>';
+        htmlString += '<div class="upcoming-block"><div class="expand" target="_blank">' + item.name + '<span class="event-time">' + date + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide">RSVP on meetup.com</a>' + '</div><div class="hidden-until-shown custom-hide">' + item.description + '</div>' + '</div>';
       //  var address_1 = item.venue['address_1'];
       // var venuetesting = item.venue;
       // console.log(venuetesting["id"]);

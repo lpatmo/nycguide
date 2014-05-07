@@ -26,13 +26,13 @@
       var marker = new google.maps.Marker({
         position: latLng,
         map: map,
-        icon: green
+        icon: red
     }); //each
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
            var time = item.time;
             var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
-        var meetupgroup = '<h2>' + item.name + ' <a href="' + item.event_url + '" target="_blank">' + '(' + item.group.name + ') '+ '</a></h2>' + '<h3>' + date + '</h3>' + '<p> (' + item.yes_rsvp_count + ' people attending so far) </p>' + '<p><a class="btn btn-primary btn-lg" href="' + item.event_url + '">' + 'RSVP to this event on Meetup.com' + '</a>';
+        var meetupgroup = '<h2>' + item.name + ' <a href="' + item.event_url + '" target="_blank">' + '(' + item.group.name + ') '+ '</a></h2>' + '<h3>' + date + '</h3>' + '<p> (' + item.yes_rsvp_count + ' people attending so far) </p>' + '<p><a class="btn btn-meetup" href="' + item.event_url + '">' + 'RSVP on Meetup.com' + '</a>';
         var meetuplogo = '<a href="' + item.event_url + '" target="_blank">' + item.name + '</a>';
         return function() {
           infowindow.setContent(meetuplogo);
@@ -65,7 +65,7 @@ var content = [
 
 
 var places = [
-      ['<h3>Alley NYC</h3>' + '<a class="btn btn-default" href="#alleynyc">Read More</a>', 40.753694, -73.989082, green, content[0]],
+      ['<h3>Alley NYC</h3>' + '<a class="btn btn-default" href="#alleynyc">Read More</a>', 40.753694, -73.989082, red, content[0]],
       ['<h3>General Assembly</h3>' + '<a class="btn btn-default" href="#generalassembly">Read More</a>', 40.740575, -73.990112, blue, content[1]],
       ['<h3>Trader Joe\'s in Brooklyn</h3>' + '<a class="btn btn-default" href="#traderjoebrooklyn">Read More</a>', 40.690271, -73.992669, red, content[2]]
     ];
@@ -76,7 +76,7 @@ var places = [
        for (i = 0; i < places.length; i++) { 
         //console.log(places[i][3]);
       if (places[i][3] === "green") {
-        markerColor = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+        markerColor = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
            } else if (places[i][3] === "blue" ) {
         markerColor = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
            } else {

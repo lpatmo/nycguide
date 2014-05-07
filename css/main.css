@@ -68,9 +68,15 @@ a.btn {
 .upcoming-block:hover .event-time {
 	//color: #ccc;
 }
-.upcoming-block:hover a.btn-meetup, a.btn-meetup:hover {
+.upcoming-block:hover {
+	//background: #cc1c32;
+	color: white;
+}
+a.btn-meetup, a.btn-meetup:hover {
 	background: #cc1c32;
 	color: white;
+	text-decoration: uppercase;
+	font-size: 20px;
 }
 .custom-hide {
 	display: none;
@@ -120,7 +126,8 @@ a.btn {
 	padding: 5px 10px 10px 15px;
 	color: white;
 	width: 350px;
-	background: url('../images/black_lozenge.png');
+	background: #333;
+	box-shadow: 0 0 10px #ccc;
 }
 .table-of-contents a, .intro a {
 	color: #FFB800;
@@ -129,8 +136,13 @@ a.btn {
 /**Header Section**/
 .top {
 	height: 500px;
-	background: url('../images/sunset-low.jpg');
+	background: url('http://37.media.tumblr.com/8fb80a2a6111ffbf05defc3a758a2f8a/tumblr_n10n4rpjvZ1st5lhmo1_1280.jpg') no-repeat center center fixed;
+	//background: url('../images/sunset-low.jpg') no-repeat center center fixed;
 	background-size: cover;
+	-webkit-background-size: cover; /* the next 3 lines are "browser prefixes", they are necessary to include for CSS3 techniques */
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	height: 450px;
 
 }
 .intro {
@@ -195,6 +207,17 @@ span.title, h1, h2, h3 {
 	}
 }
 
+/*Panels*/
+.panel-default > .panel-heading {
+	//text-transform: uppercase;
+	background-color: #333 !important;
+	color: white;
+	background-image: none;
+	border-radius: none;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	font-weight: 200;
+}
 
 
 
