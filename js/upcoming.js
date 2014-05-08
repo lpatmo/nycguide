@@ -7,7 +7,7 @@ promise.done(function (data) {
          if (item.venue && item.description) {
             var time = item.time;
             var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
-        htmlString += '<div class="upcoming-block"><div class="expand" target="_blank">' + item.name + '<span class="event-time">' + date + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide">RSVP on meetup.com</a>' + '</div><div class="hidden-until-shown custom-hide">' + item.description + '</div>' + '</div>';
+        htmlString += '<span class="upcoming-block"><a class="expand"' + 'href='+ item.event_url + ' target="_blank">' + '<i class="fa fa-calendar"></i> ' + item.name + '</a>' + '<span class="event-time">' + date + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide">RSVP on meetup.com</a>' + '</span><span class="hidden-until-shown custom-hide">' + item.description + '</span>' + '</span>';
       //  var address_1 = item.venue['address_1'];
       // var venuetesting = item.venue;
       // console.log(venuetesting["id"]);
@@ -15,9 +15,9 @@ promise.done(function (data) {
 
       $('body').on('click', 'div.upcoming-block', function() {
           // e.preventDefault();
-          $(this).find('.hidden-until-shown').toggleClass('custom-hide');
-           $('.upcoming-block:hover').css({'background': 'none', 'color': '#aaa'}); 
-           $('.upcoming-block:hover a').css({'color': '#aaa'}); 
+         // $(this).find('.hidden-until-shown').toggleClass('custom-hide');
+           //$('.upcoming-block:hover').css({'background': 'none', 'color': '#aaa'}); 
+           //$('.upcoming-block:hover a').css({'color': '#aaa'}); 
        });
 
         }    //end if

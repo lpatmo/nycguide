@@ -42,9 +42,6 @@ a.btn {
 	-webkit-box-shadow: 1px 1px 2px #ccc;
 	box-shadow: 1px 1px 2px #ccc;
 }
-.upcoming-block {
-	color: #086FA1;
-}
 .upcoming-block:hover a {
 	color: white;
 }
@@ -59,14 +56,17 @@ a.btn {
 	cursor: pointer;
 }
 .upcoming-block {
+	color: #086FA1;
 	display: inline-block;
-	margin: 4px 4px 4px 0;
+	//margin: 4px 4px 4px 0;
 	background: white;
 	padding: 10px;
-	box-shadow: 0 0 10px #ccc;
+	//box-shadow: 0 0 10px #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
 }
 .upcoming-block:hover .event-time {
-	//color: #ccc;
+	color: #ccc;
 }
 .upcoming-block:hover {
 	//background: #cc1c32;

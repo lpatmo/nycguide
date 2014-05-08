@@ -19,7 +19,8 @@
         <link rel="stylesheet" href="css/responsive.css?version=1">
         <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-        <link rel="icon" href="images/favicon.ico" />      
+        <link rel="icon" href="images/favicon.ico" />     
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> 
     </head>
    
     <body>
@@ -29,7 +30,7 @@
       </div>
 
       <div class="intro">
-           <p class="content">Inspired by <a href="http://islandofatlas.net/2013/10/04/a-hackers-guide-to-the-bay-area.html" target="_blank">A Hacker's guide to the Bay Area</a>, this guide is intended for "hackers" interested in the tech scene in NYC. I write from the perspective of a 20-something female front-end web developer who enjoys meeting people at tech meetups, <a href="http://www.thecodingdiaries.com" target="_blank">blogs about learning how to code</a>, and enjoys <a href="http://www.youtube.com/lpnotes" target="_blank">recording music</a> and thinking about civic engagement as well as geeking out about tech. </p>
+           <p class="content">Inspired by <a href="http://islandofatlas.net/2013/10/04/a-hackers-guide-to-the-bay-area.html" target="_blank">A Hacker's guide to the Bay Area</a>, this guide is intended for "hackers" interested in the tech scene in NYC. I write from the perspective of a 20-something female front-end web developer who enjoys meeting people at tech meetups, <a href="http://www.thecodingdiaries.com" target="_blank">blogs about learning how to code</a>, and enjoys <a href="http://www.youtube.com/lpnotes" target="_blank">recording music</a> and thinking about civic hacks. </p>
       </div>
       
       <div class="background">
@@ -53,30 +54,11 @@
 
           <div class="row">
              <div class="col-lg-4 main-content pull-right">
-                <div class="table-of-contents panel panel-default">
-                  <div class="panel-heading">Table of Contents</div>
+                <div class="table-of-contents2 panel panel-default">
+                  <div class="panel-heading">Tech Meetups in NYC This Week</div>
                 <div class="panel-body">
-                    <ul>
-                      <li><a href="#header-upcoming">Upcoming Tech Meetups in NYC This Week</a></li>
-                      <li><a href="#header-developers">Where do I meet other developers?</a></li>
-                        <ul>
-                            <li><a href="#hackathons">Hackathons</a></li>
-                            <li><a href="#hackerhours">Hacker Hours and Code Crew</a></li>
-                            <li><a href="#specific">Language or topic-specific</a></li>
-                            <li><a href="#women">Women-oriented</a></li>
-                        </ul>
-                      <li><a href="#header-tech-education">Tech education (paid)</a></li>
-                          <ul>
-                            <li><a href="#flatironschool">The Flatiron School</a></li>
-                            <li><a href="#generalassembly">General Assembly</a></li>
-                            <li><a href="#nyu">NYU</a></li>
-                          </ul>
-                      <li><a href="#other-activites">Other activities (quick guide)</a></li>
-                      <li><a href="#eating">Eating (quick guide)</a></li>
-                      <li><a href="#rent">Rent (quick guide)</a></li>
-                      <li><a href="#transportation">Transportation (quick guide)</a></li>
-                      <li><a href="#backtomap">Back to the map</a></li>
-                    </ul>
+                   <div id="upcoming"></div>
+                    
                 </div><!--body-->
               </div><!--paneldefault-->
             </div><!--col4-->
@@ -86,15 +68,17 @@
               <!-- Default panel contents -->
               <div class="panel-heading background">Background</div>
               <div class="panel-body">
-                <p>I started frequenting tech meetups -- mostly via <a href="http://www.meetup.com" target="_blank">meetup.com</a> -- in 2013. I had just transitioned into a full-time front-end web development role at a progressive non-profit, had just gone to my first hackathon in November 2012, and was thirsting to meet other developers.</p>
+                <p>I started frequenting tech meetups -- mostly via <a href="http://www.meetup.com" target="_blank">meetup.com</a> -- in 2013. I had just transitioned into a full-time front-end web development role at a progressive non-profit, had gone to my first hackathon in November 2012, and was thirsting to meet other developers.</p>
                 <p> To be honest, I think much of my enthusiasm for tech meetups stemmed from the fact that I worked at a completely distributed office -- which meant that everyone worked from home. I loved interacting with my co-workers online, but to be able to talk shop about what technologies people were using or learning, and to share about victories and struggles, was a breath of fresh air away from the lonely intensity of the computer screen. </p>
-                <p>Silicon "Alley" can't quite compete with Silicon Valley for the tech mecca trophy, but it is growing -- and the tech industry is fast becoming NYC's <a href="http://www.theverge.com/2013/9/30/4784088/bloomberg-tech-summit-study-says-new-york-city-tech-is-booming" target="_blank"> second largest sector</a>. The city is big enough that there are often multiple meetups or hackathons going on at once, but small enough that I've met acquaintances that have become friends. More than 1000 tech and digital companies proudly show off their "Made in NY" labels, too; you can check out the full list of NYC-based tech companies <a href="http://wearemadeinny.com/made-in-ny-list/" target="_blank">here.</a> </p>
+                <p>Silicon "Alley" can't quite compete with Silicon Valley for the tech mecca trophy, but it is growing -- and the tech industry is fast becoming NYC's <a href="http://www.theverge.com/2013/9/30/4784088/bloomberg-tech-summit-study-says-new-york-city-tech-is-booming" target="_blank"> second largest sector</a>. The city is big enough that there are often multiple meetups or hackathons going on at once, but small enough that I've met acquaintances that have become friends.
+                </p>
+                <p>More than 1000 tech and digital companies proudly show off their "Made in NY" labels, too; you can check out the full list of NYC-based tech companies <a href="http://wearemadeinny.com/made-in-ny-list/" target="_blank">here.</a> </p>
               </div><!--body-->
           </div><!--panel-->
 
               <div class="panel panel-default">
-                <div class="panel-heading" id="header-upcoming">Upcoming Tech Meetups in NYC This Week</div>
-                  <div class="panel-body">
+                <div class="panel-heading" id="header-upcoming">Where should I live?</div>
+                  <div class="panel-body" style="overflow-y: scroll;">
                       <div id="upcoming"></div>
                   </div>
               </div>
@@ -111,15 +95,20 @@
                      <p>If you want to get more language or topic-specific, NYC has a host of meetups. The Wordpress meetup hosts a speaker event for $6 (pizza and water bottle included!) every third Tuesday at Alley NYC, and has featured Buddypress developers to former Automattic employees. Ruby on Rails is very popular, and has its own meetups, though I haven't been to any yet. The <a href="http://www.meetup.com/nycpython/" target="_blank">New York Python Meetup</a> is also very active, and has weekly informal study groups/office hours on Saturdays and Sundays as well as speaker events. For those interested in a more structured learning environment, the <a href="http://www.meetup.com/NYPluralsightStudy/" target="_blank">Pluralsight meetup</a> (hosted at Microsoft's offices in midtown) features weekly video sessions on anything from git to node.js. Spaces at Pluralsight run out pretty quickly, though -- so make sure you sign up. </p>
                      <h3 id="women">Women-oriented</h3>
                         <p>There are quite a few meetups/events for women in tech if you look closely. In September 2013, Facebook and Birchbox co-hosted <a href="http://facebookbirchbox.splashthat.com/#!"> target="_blank">a fun night of networking and board games</a> for women engineers. For those looking for a hackthon where the gender ratio is more or less 50-50,<a href="http://www.meetup.com/nycpython/" target="_blank">Hack 'n Jill</a> takes place once or twice a year in the city, and is something to check out. <a href="http://www.meetup.com/Ladies-Who-Code/" target="_blank">Ladies Who Code</a> hosts monthly pizza-and-cupcake-filled small gathering hack nights, and <a href="http://www.writespeakcode.com/" target="_blank">Write Speak Code</a>, an inaugural professional development conference for women developers by women developers was also held in NYC in June.</p>
-                  Alley NYC - <a href="https://maps.google.com/maps?q=40.753548,-73.989297&num=1&vpsrc=0&ie=UTF8&t=m&z=16" target="_blank">500 7th Avenue, NYC</a>
-                     <p>The home of many meetups in the city -- including <a href="http://www.meetup.com/wordpressnyc/" target="_blank">NYC Wordpress</a>, Code Crew, Hacker Hours, and a ton of hackathons. By day it functions as a coworking space. </p>
+                  
                     </div><!--body-->
                   </div><!--panel-->
 
 
                   <div class="panel panel-default">
-                     <div class="panel-heading" id="header-tech-education">What are some developer bootcamps in the city?</div>
+                     <div class="panel-heading" id="header-tech-education">What are some developer bootcamps or schools in the city?</div>
                         <div class="panel-body">
+                          <h3>Hacker School</h3>
+                          <p>A 3-month writer's retreat for programmers. They have a laudable <a href="#">developer contract</a>.</p>
+                          <h3 id="flatironschool">Fullstack Academy</h3>
+                          <p>Specializes in Ruby on Rails.</p>
+                          <h3 id="flatironschool">App Academy</h3>
+                          <p>A Ruby on Rails shop. </p>
                            <h3 id="flatironschool">The Flatiron School</h3>
                              <p>The Flatiron School takes students through a <a href="http://flatironschool.com/rubycurriculum.html" target="_blank"> 12-week full-time</a> intensive training regime in web development (with a focus on Ruby on Rails).</p>
                                <h3 id="generalassembly">General Assembly</h3>
@@ -141,9 +130,16 @@
                              <p>Many jokes and blog posts have been produced about the hazards of finding a good apartment in NYC. In my experience, Craigslist can be helpful, but roommate searching via your network of friends (or anyone you might be acquainted with) is even more helpful. Some people swallow the fees and use brokers to some success.
                               <h2 id="transportation">Transportation (quick guide)</h2>
                               <p>Unless you live more than 15 minutes walking distance from a subway station, trust me -- you won't need a car! The subways can be confusing during the weekend when the local tracks run express or when parts of the subways are shut down, but in general you'll be able to make your destination with a couple of transfers along the way. If you get lost during your first few weeks here, don't be afraid to ask a stranger for directions. The buses in the city are also a convenient way to get around. You can ride on them for the same price as a subway ride. Most people who live in NYC buy monthly subway passes, which allows them to take a subway or a bus as many times as they want.</p>
+                  </div>
+                 </div>
+
+                    <div class="panel panel-default">
+                <div class="panel-heading" id="header-upcoming">What mailing lists should I follow?</div>
+                  <div class="panel-body">
+                      body
+                  </div>
               </div>
 
-          </div>
             
 
 </div>
