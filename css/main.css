@@ -94,6 +94,9 @@ a.btn-meetup, a.btn-meetup:hover {
 	font-size: 16px;
 	display: block;
 }
+small {
+	color: #999;
+}
 
 .background-white {
 	background: white;
@@ -219,7 +222,19 @@ span.title, h1, h2, h3 {
 	font-weight: 200;
 }
 
+/*Footer*/
+#footer {
+	background: #333;
+	color: white;
+	padding: 30px;
+}
+#footer a {
+	color: white;
+}
 
+img {
+	margin-top: 10px;
+}
 
 
 
