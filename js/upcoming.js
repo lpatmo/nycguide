@@ -16,7 +16,7 @@
       //  console.log(item.venue["address_1"]);
     
       $('body').on('click', 'div#'+i, function(e) {
-         alert($(this));
+         //alert($(this));
           e.preventDefault();
           
          $(this).find('span.description').toggleClass('custom-hide');
