@@ -77,6 +77,7 @@ a.btn-meetup, a.btn-meetup:hover {
 	color: white;
 	text-decoration: uppercase;
 	font-size: 20px;
+	margin-top: 10px;
 }
 .custom-hide {
 	display: none;
