@@ -9,7 +9,7 @@
             var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
 
 
-        htmlString += '<div class="upcoming-block" id="' + i +'""><a class="expand"' + 'href='+ item.event_url + ' target="_blank">' + '<i class="fa fa-calendar"></i> ' + item.name + '</a>' + '<span class="event-time">' + date + '</span>' + '</span><span class="description custom-hide">' + '<a href="' + item.event_url + '"class="btn btn-meetup">RSVP on meetup.com</a> <hr />' + item.description + '</span>' + '</div>';
+        htmlString += '<div class="upcoming-block" id="' + i +'""><a class="expand"' + 'href='+ item.event_url + ' target="_blank">' + '<i class="fa fa-calendar"></i> ' + item.name + '</a>' + '<span class="event-time">' + date + '</span>' + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide">RSVP on meetup.com</a>' +'<span class="description custom-hide">' + item.description + '</span>' + '</div>';
       //  var address_1 = item.venue['address_1'];
       // var venuetesting = item.venue;
       // console.log(venuetesting["id"]);
