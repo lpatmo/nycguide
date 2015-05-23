@@ -9,20 +9,17 @@
             var date = moment(time).format('dddd, MMMM Do YYYY [at] ha');
 
 
-        htmlString += '<div class="upcoming-block" id="' + i +'""><a class="expand"' + 'href='+ item.event_url + ' target="_blank">' + '<i class="fa fa-calendar"></i> ' + item.name + '</a>' + '<span class="event-time">' + date + '</span>' + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide">RSVP on meetup.com</a>' +'<span class="description custom-hide">' + item.description + '</span>' + '</div>';
-      //  var address_1 = item.venue['address_1'];
-      // var venuetesting = item.venue;
-      // console.log(venuetesting["id"]);
-      //  console.log(item.venue["address_1"]);
+        htmlString += '<div class="upcoming-block" id="' + i +'""><span class="expand"' + '<i class="fa fa-calendar"></i> ' + item.name + '</span>' + '<span class="event-time">' + date + '</span>' + '</span>' + '<a href="' + item.event_url + '"class="btn btn-meetup custom-hide" target="_blank">RSVP on meetup.com</a>' +'<span class="description custom-hide">' + item.description + '</span>' + '</div>';
     
-      $('body').on('click', 'div#'+i, function(e) {
+      $('body').on('click', 'div#'+i, function() {
          //alert($(this));
-          e.preventDefault();
-          
+         // e.preventDefault();
          $(this).find('span.description').toggleClass('custom-hide');
-         
-           //$('.upcoming-block:hover').css({'background': 'none', 'color': '#aaa'}); 
-           //$('.upcoming-block:hover a').css({'color': '#aaa'}); 
+         $(this).find('.btn-meetup').toggleClass('custom-hide');
+         $('.upcoming-block:hover').css({'background': 'none', 'color': '#aaa'}); 
+         $(this).find('.upcoming-block:hover a').css({'color': '#ccc'}); 
+         $(this).find('.expand').css({'color': '#999'}); 
+         $('.btn-meetup').css({'color': '#fff'}); 
        });
 
    
